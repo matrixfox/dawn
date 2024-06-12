@@ -149,27 +149,24 @@ pickup-availability-drawer[open] {
 }
 
 @keyframes animateDrawerOpen {
-  @media screen and (max-width: 749px) {
-    0% {
-      opacity: 0;
-      transform: translateX(100%);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
   }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-  @media screen and (min-width: 750px) {
-    0% {
-      opacity: 0;
-      transform: translateX(100%);
-    }
+@media screen and (max-width: 749px) {
+  .drawer {
+    animation: animateDrawerOpen 0.5s forwards;
+  }
+}
 
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+@media screen and (min-width: 750px) {
+  .drawer {
+    animation: animateDrawerOpen 0.5s forwards;
   }
 }
